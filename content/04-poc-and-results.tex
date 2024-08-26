@@ -1,50 +1,9 @@
 \section{Proof-of-Concept and Results}
 
 \begin{frame}{Target platform}
-    \begin{columns}
-        \column{.5\linewidth}
-        \begin{block}{MA-Memphis \cite{Dalzotto:2021:MA-Memphis}}
-            \begin{itemize}
-                \item Modeled at cycle-accurate RTL
-                \item Data NoC
-                \item Broadcast NoC
-                \item RISC-V RV32IM processor
-                \item Network Interface with Direct Memory Access
-                \item Small operating system
-            \end{itemize}
-        \end{block}
-
-        \column{.5\linewidth}
-        \begin{block}{Target applications}
-            \begin{itemize}
-                \item \textbf{MPEG:} pipelined MPEG decoding with 6 tasks
-                \item \textbf{DTW:} fork-join pattern-recognition with 6 tasks
-                \item \textbf{Dijkstra:} master-slave Dijkstra's shortest path algorithm with 7 tasks
-                \item \textbf{A/V:} two pipelines audio and video decoding benchmark with 7 tasks
-            \end{itemize}
-        \end{block}
-    \end{columns}    
+  
 \end{frame}
 
 \begin{frame}{Results}
-    \begin{columns}
-        \column{.6\linewidth}
-        \vspace{-1cm}
-        \begin{table}[!ht]
-            \resizebox{\linewidth}{!}{
-                \input{tables/results_be_tuned}
-            }
-        \end{table}
-        \begin{figure}
-            \centering
-            \includesvg[width=\linewidth]{fig/confusion.svg}
-        \end{figure}
 
-        \column{.4\linewidth}
-        \begin{itemize}
-            \item Small applications have anomalies easily detected
-            \item Application complexity demands bigger model
-            \item Lower A/V precision, but dataset is heavily unbalanced
-        \end{itemize}
-    \end{columns}
 \end{frame}
