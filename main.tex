@@ -1,0 +1,116 @@
+%----------------------------------------------------------%
+% Beamer template for presentations within PPGCC PUCRS     %
+% by Anderson Domingues (anderson.domingues@acad.pucrs.br) %
+%                                                          %
+% made over "Template Beamer para Apresentações da UFRN"   %
+% by alcemygvseverino@gmail.com (ver. 1.1, 14/05/2016)     %
+%----------------------------------------------------------%
+
+\documentclass[aspectratio=169,handout,t,table]{beamer}
+
+%\usepackage[table]{xcolor}
+\usepackage[english]{babel}              % document language
+\usepackage[utf8]{inputenc}              % utf-8 support
+% \usepackage{multicol}
+
+%\usepackage[alf]{abntex2cite}            % ABNT citation style
+
+\usepackage[square]{natbib}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{multirow}
+
+% \usepackage{url}
+\usepackage{pgfpages}                   % allows including pdf
+
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage{ifthen}
+\usepackage{capt-of}                    % support for caption 
+
+\usepackage{soul}
+\usepackage{booktabs}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{svg}
+
+
+% Background
+% \setbeamertemplate{background}{
+%     \includegraphics[width=\paperwidth,keepaspectratio]{template/sbcci24bg.png}
+% }
+
+% TikZ solution
+\newcommand*\circnum[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=1.2pt] (char) {#1};}} 
+
+\usetikzlibrary{arrows,shapes,fit,positioning,shadows,trees,calc,pgfplots.groupplots}
+\tikzset{every picture/.style={/utils/exec={\sffamily}}}
+\input{omni-spring-pastels}
+
+\usetheme{Berlin}                       % theme (layout)
+\usecolortheme{pucrs}                    % colors
+
+\setbeamertemplate{caption}[numbered]   % add enumeration to figures
+
+\title[Joint Computation and Communication Analysis of Hard Real-Time applications in Manycores]{% TITLE
+Joint Computation and Communication Analysis of Hard Real-Time applications in Manycores}
+
+\author[Angelo Elias Dal Zotto]{Anderson R. P. Domingues, Lucas Damo, Sergio J. Filho, and Fernando G. Moraes\\
+\footnotesize{\{anderson.domingues, lucas.damo\}@edu.pucrs.br; \{sergio.filho, fernando.moraes\}@pucrs.br}}
+
+\institute[PUCRS]{
+PUCRS – School of Technology, Porto Alegre, Brazil\\\vspace{1em}
+Presenter: Angelo Dal Zotto}
+
+\titlegraphic{
+    \vspace{1cm}
+    \includegraphics[height=1cm]{template/gaph.png}
+    \hspace*{\fill}
+    \includegraphics[height=1cm]{template/sbcci24.png}
+    \hspace*{\fill}
+    \includegraphics[height=1.2cm]{template/pucrs.png}
+}
+
+\logo{
+    \includegraphics[height=1cm, decodearray={0.85 1 0.85 1 0.85 1}]{template/sbcci24bw.png}
+}
+
+\begin{document}
+
+\AtBeginSection[]
+{
+    \begin{frame}
+        \frametitle{Overview}
+        % \begin{multicols}{2}
+            % \tableofcontents[currentsection, hideothersubsections]
+        % \end{multicols}
+        \tableofcontents[hideallsubsections]
+    \end{frame}
+}
+
+\frame[plain]{\titlepage}
+
+% your content goes below
+\include{content/01-introduction}
+\include{content/02-baseline-platform}
+\include{content/03-a-framework}
+\include{content/04-poc-and-results}
+\include{content/05-conclusion}
+
+\frame[plain]{\titlepage}
+
+\begin{frame}[allowframebreaks]{References}
+    \tiny
+    \bibliographystyle{apalike}
+    \bibliography{bibliography}
+\end{frame}
+
+\end{document}
+

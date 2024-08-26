@@ -1,0 +1,82 @@
+\section{Baseline Platform}
+
+\begin{frame}{Application profile}
+    \centering Example with MPEG application (pipeline)
+    \begin{figure}[!ht]
+        \centering
+        \resizebox{.5\linewidth}{!}{
+            \input{fig/mpeg_ctg}
+        }
+    \end{figure}
+    
+    \vspace{10pt}
+    \begin{columns}
+        \column{.45\linewidth}
+        \centering Contiguous mapping
+        \begin{figure}
+            \centering
+            \resizebox{.4\linewidth}{!}{
+                \input{fig/mpeg_map_good}
+            }
+        \end{figure}
+
+        \column{.45\linewidth}
+        \centering Non-Contiguous mapping
+        \begin{figure}
+            \centering
+            \resizebox{.5\linewidth}{!}{
+                \input{fig/mpeg_map_ugly}
+            }
+        \end{figure}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Application profile}
+    \centering Communication behavior
+
+    \begin{figure}[!ht]
+        \centering
+        \resizebox{.75\linewidth}{!}{
+            \input{fig/latency_C_NC}
+        }
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Application profile}
+    \centering Mapping with Disturbing traffic
+    \begin{figure}
+        \centering
+        \input{fig/mpeg_map_bad}
+    \end{figure}
+
+    \begin{itemize}
+        \item $m_p$ sends messages to $m_c$
+        \item Random intervals (100-500 $\mu s$)
+        \item 96 flits per message        
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Application profiling}
+    \centering Communication behavior
+
+    \begin{figure}[!ht]
+        \centering
+        \resizebox{0.75\linewidth}{!}{
+            \input{fig/latency_C_NC_D}
+        }
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Application profile}
+    \begin{itemize}
+        \item An application has a communication behavior for each of its edges
+        \item The behavior does not change with the number of hops between edges
+    \end{itemize}
+
+    \vspace{0.5cm}
+    \textit{This behavior cannot be captured by models that only monitor latency, which was adopted in early work}
+
+    \begin{alertblock}{Challenge}
+        Develop an application profile capable of monitoring the latency of each edge in the NoC to detect potential malicious interferences using ML
+    \end{alertblock}
+\end{frame}

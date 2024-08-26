@@ -1,0 +1,36 @@
+\begin{tikzpicture}[thick]
+
+    \fill[gray!50](0.5,0.5) rectangle (8.5, 2.5); ;
+    \draw[step=1 cm, color=black] (0.25, 0.25) grid (8.75, 2.75);
+    
+    \node[fill=omni-spring-pastels-2, minimum size=1 cm, draw=black] (1) at (2.5, 1.5) {\textbf{$t_0$}};
+    \node[fill=omni-spring-pastels-2, minimum size=1 cm, draw=black] (3) at (3.5, 1.5) {\textbf{$t_1$}};
+    \node[fill=omni-spring-pastels-2, minimum size=1 cm, draw=black] (2) at (4.5, 1.5) {\textbf{$t_2$}};
+    \node[fill=omni-spring-pastels-2, minimum size=1 cm, draw=black] (4) at (5.5, 1.5) {\textbf{$t_3$}};
+    \node[fill=omni-spring-pastels-2, minimum size=1 cm, draw=black] (5) at (6.5, 1.5) {\textbf{$t_4$}};
+    
+
+    \coordinate (4t2) at (2.75, 1.5) ;
+    \coordinate (2f4) at (3.25, 1.5) ;
+    \draw[->, very thick] (4t2) -- (2f4);
+    
+    \coordinate (2t1) at (3.75, 1.5) ;
+    \coordinate (1f2) at (4.25, 1.5) ;
+    \draw[->, very thick] (2t1) -- (1f2);
+
+    \coordinate (1t0) at (4.75, 1.5) ;
+    \coordinate (0f1) at (5.25, 1.5) ;
+    \draw[->, very thick] (1t0) -- (0f1);
+    
+    
+    \coordinate (0t3) at (5.75, 1.5) ;
+    \coordinate (3f0) at (6.25, 1.5) ;
+    \draw[->, very thick] (0t3) -- (3f0);
+
+    \node[fill=omni-spring-pastels-5, minimum size=1 cm, draw=black] (6) at (1.5, 1.5) {\textbf{$m_p$}};
+    \node[fill=omni-spring-pastels-5, minimum size=1 cm, draw=black] (7) at (7.5, 1.5) {\textbf{$m_c$}};
+
+    \coordinate (ptc) at (1.75, 1.75) ;
+    \coordinate (cfp) at (7.25, 1.75) ;
+    \draw[red, ->, very thick] (ptc) -- (cfp);
+\end{tikzpicture}

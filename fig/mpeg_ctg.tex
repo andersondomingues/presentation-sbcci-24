@@ -1,0 +1,14 @@
+\begin{tikzpicture}[thick, node distance={17mm}, main/.style={circle,draw,fill=omni-spring-pastels-2}]
+    
+    \node[main] (4) {$t_0$};
+    \node[main] (2) [right of=4] {$t_1$};
+    \node[main] (1) [right of=2] {$t_2$};
+    \node[main] (0) [right of=1] {$t_3$};
+    \node[main] (3) [right of=0] {$t_4$};
+    
+    \draw[->] (4) -- (2) node[midway, yshift=5] {$e_{0,1}$};
+    \draw[->] (2) -- (1) node[midway, yshift=5] {$e_{1,2}$};
+    \draw[->] (1) -- (0) node[midway, yshift=5] {$e_{2,3}$};
+    \draw[->] (0) -- (3) node[midway, yshift=5] {$e_{3,4}$};
+    
+\end{tikzpicture}
