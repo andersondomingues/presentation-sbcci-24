@@ -1,9 +1,13 @@
 \section{Proof-of-Concept and Results}
 
-\begin{frame}{Target platform}
+\begin{frame}{Experimentation Setup}
   
-\end{frame}
-
-\begin{frame}{Results}
-
+  \begin{itemize}
+  	\item We experiment on the SAE (synthetic) application whose minimum frequency to meet its RT requirements is known ($500$MHz).
+  	\item We map SAE to a 2x2 instance of our manycore
+	\item We perform clustering using the \textit{max-proc} criterion and $n = 4$.
+	\item The nominal frequency of our platform is $2.5$GHz, which is also given as input to our framework. 
+	\item By the last iteration, our framework found $500.4$MHz as the minimum frequency to meet the RT constraints on the platform. Since we cannot display the results for all iterations, we couple to show the last step and demonstrate how the found frequency meets the requirement of the application (the last frequency).
+  \end{itemize}
+  
 \end{frame}
