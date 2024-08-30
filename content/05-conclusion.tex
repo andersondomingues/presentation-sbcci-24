@@ -1,5 +1,42 @@
-\section{Conclusions and Future Work}
+\section{Conclusions and Acknowledgements}
 
-\begin{frame}{Final remarks}
-asasas
+\begin{frame}{Conclusion}
+
+	\begin{itemize}
+		\item This paper proposes a framework for asserting the RT properties of applications running on NoC-based, multitasking, private-memory manycores. 
+		
+		\item Our framework observes the computation and communication  aspects of the application, adjusting the frequency of the target platform to the minimum while allowing the application to meet its RT requirements. 
+		
+		\item We demonstrate our framework on the SAE application, running on our manycore. Our framework could reduce the manycore frequency without compromising the RT requirements of SAE.%GRAMMARLY-OK
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Conclusion (contd.)}
+	
+	\begin{itemize}
+	\item Our framework enables the exploration of RT at the pre-runtime, alleviating the effects of stacked NFRs in the design. We avoid modeling design-specific features in our framework, e.g., buffer, allowing our framework to suit virtually any NoC that provides a zero-load latency model. 
+	
+	\item Future works include 
+	\begin{enumerate}
+
+		\item evaluating our approach while considering multiple NFRs, e.g. area and energy requirements; 
+		
+		\item experiment with more complex applications~\cite{shi:2010}; 
+		
+		\item make use of dynamic voltage-frequency scaling (DVFS) to improve energy efficiency without compromising real-time performance, and (iv) improve the automation of the approach, e.g., integration with ModelSim.
+		
+	\end{enumerate}
+	\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}{Acknowledgement}
+	
+	\begin{itemize}
+		\item This work was financed in part by Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES), Finance Code 001; Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq), 309605/2020-2 and 407829/2022-9; Fundação de Amparo à Pesquisa do Estado do Rio Grande do Sul (FAPERGS), 21/2551-0002047-4 and 23/2551-0002200-1.
+	\end{itemize}
+
+	
 \end{frame}

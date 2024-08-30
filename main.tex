@@ -40,6 +40,19 @@
 \usepackage{pgfplotstable}
 \usepackage{svg}
 
+%\usepackage[table]{xcolor}  % cores 
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks   = true,
+	citecolor    = blue,
+	urlcolor     = blue,
+	linkcolor    = blue,
+	breaklinks   = true
+}
+
+\newcommand{\rowcolordark}{blue!10}
+\newcommand{\rowspecial}{green!10}
 
 % Background
 % \setbeamertemplate{background}{
@@ -59,10 +72,10 @@
 
 \setbeamertemplate{caption}[numbered]   % add enumeration to figures
 
-\title[Joint Computation and Communication Analysis of Hard Real-Time applications in Manycores]{% TITLE
+\title[Comp. \& Comm. Analysis of HRT Apps in Manycores]{% TITLE
 Joint Computation and Communication Analysis of Hard Real-Time applications in Manycores}
 
-\author[Angelo Elias Dal Zotto]{Anderson R. P. Domingues, Lucas Damo, Sergio J. Filho, and Fernando G. Moraes \newline
+\author[Domingues et al.¨]{Anderson R. P. Domingues, Lucas Damo, Sergio J. Filho, and Fernando G. Moraes \newline
 \footnotesize{\{anderson.domingues, lucas.damo\}@edu.pucrs.br; \{sergio.filho, fernando.moraes\}@pucrs.br}}
 
 \institute[PUCRS]{
@@ -102,7 +115,7 @@ Presenter: \textbf{Angelo Dal Zotto}}
 \include{content/02-baseline-platform}
 \include{content/03-a-framework}
 \include{content/04-poc-and-results}
-%\include{content/05-conclusion}
+\include{content/05-conclusion}
 
 \frame[plain]{\titlepage}
 
