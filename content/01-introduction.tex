@@ -5,9 +5,9 @@
         \item NoCs are attractive options for system interconnection in
         manycores due to their potential for massively parallel communication and scalability while inserting low overhead for area and energy consumption into the design. 
         
-        \item NoC routers provide the communication infrastructure in a typical NoC, allowing multiple data streams to traverse the system simultaneously~\cite{kumar:2021, benini:2002, jantsch:2005}. 
+        \item Routers provide the communication infrastructure in a typical NoC, allowing multiple data streams to simultaneously traverse the system  \cite{kumar:2021, benini:2002, jantsch:2005}. 
         
-        \item Some NoC designs acknowledge the implementation of NFR, e.g., security, safety~\cite{Charles:2020, Guo:2020}, and real-time. 
+        \item Some NoC designs acknowledge the implementation of NFR, e.g., security, safety~\cite{Charles:2020, Guo:2020}, and real-time \textcolor{red}{(*)}. 
         
         \item The main concern of RT-NoCs is predictability --- a particularly important property in control-theoretic, cyber-physical, and robotics domains due to the need for compliance with stringent safety constraints~\cite{autosar:2021, iso:asil:2020, spice:2021}.%GRAMMARLY-OK
         
@@ -16,26 +16,26 @@
 
 \begin{frame}{Introduction (contd.)}
 	\begin{itemize}
-		\item Designing hardware that accounts for multiple NFRs is challenging due to the implementation of conflicting NFRs. 
-		
-		\item For instance, implementing a security feature may modify the timing of the system. Similarly, predictable hardware may add energy and area overheads, due to additional circuitry.
+		\item Designing hardware that accounts for multiple NFRs is challenging due to the implementation of \textcolor{red}{conflicting NFRs}, e.g., implementing a security feature may modify the timing* of the system. Similarly, predictable hardware may add energy and area overheads, due to additional circuitry.
 		
 		\item The lack of specialized literature aggravates the problem, as the  techniques often manage NFRs as isolated. 
 		
-		\item Also, studies on multiple NFRs, e.g., power and real-time~\cite{li:2023} propose techniques on non-publicly available platforms, making it unfeasible to replicate the techniques on industrial-grade projects.%GRAMMARLY-OK
+		\item Also, studies on multiple NFRs, e.g., power and real-time~\cite{li:2023} propose techniques on non-publicly available platforms, making it unfeasible to replicate the techniques on industrial-grade projects.
 		
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{Concerns of RT Analysis on Manycores}
 	\begin{itemize}
-		\item Concerning RT, the analysis of applications on NoC-based, private memory, and multitasking manycores must consider both the individual processing elements (PEs) and the underlying NoC. The analysis of PEs regards the CPU and I/O peripherals, while RT-NoCs partake in the RT guarantees for communication. 
+		\item The analysis of applications on NoC-based, private memory, and multitasking manycores must consider both the individual processing elements (PEs) and the underlying NoC. The analysis of PEs regards the CPU and I/O peripherals, while RT-NoCs partake in the RT guarantees for communication. 
 		
 		\item Recent studies on RT-NoCs~\cite{Deniziak:2018, chen:2020, Picornell:2019} do not approach computation, missing mechanisms for synchronizing processing and communication operations. 
 		
+		\begin{itemize}
 		\item Considering commercial off-the-shelf (COTS) platforms, whose hardware cannot be changed, is it possible to run a given application and guarantee RT for tasks and traffic? 
 		
 		\item Assuming platforms where we can change the nominal frequency, what is the minimum frequency to address the RT requirements of an application? How can we address RT without tampering with other NFRs?
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
